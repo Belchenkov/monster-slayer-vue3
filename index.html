@@ -38,10 +38,10 @@
       <section id="controls">
         <button @click="attackMonster">ATTACK</button>
         <button
-                :disabled="currentRound % 3 !== 0"
+                :disabled="mayUseSpecialAttack"
                 @click="specialAttackMonster"
         >SPECIAL ATTACK</button>
-        <button @click="">HEAL</button>
+        <button @click="healPlayer">HEAL</button>
         <button @click="">SURRENDER</button>
       </section>
       <section id="log" class="container">
