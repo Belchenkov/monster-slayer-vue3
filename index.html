@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue Basics</title>
+    <title>Monster Slayer Game</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
       rel="stylesheet"
@@ -40,15 +40,16 @@
         <h3 v-if="winner === 'monster'">You lost!</h3>
         <h3 v-else-if="winner === 'player'">You won!</h3>
         <h3 v-else>It's a draw!</h3>
+        <button @click.prevent="startGame">Start New Game</button>
       </section>
-      <section id="controls">
+      <section id="controls" v-if="!winner">
         <button @click="attackMonster">ATTACK</button>
         <button
                 :disabled="mayUseSpecialAttack"
                 @click="specialAttackMonster"
         >SPECIAL ATTACK</button>
         <button @click="healPlayer">HEAL</button>
-        <button @click="">SURRENDER</button>
+        <button @click="surrender">SURRENDER</button>
       </section>
       <section id="log" class="container">
         <h2>Battle Log</h2>
