@@ -2,7 +2,7 @@
 
 >  Game "Monster Slayer" on Vue 3
 
-### 
+### [Demo](http://monster-slayer-vue3-ab.surge.sh)
 
 ### Get started
 
